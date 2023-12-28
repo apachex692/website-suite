@@ -1,0 +1,19 @@
+Include /etc/ssh/sshd_config.d/*.conf
+
+Port            8185
+PermitRootLogin no
+MaxAuthTries    6
+MaxSessions     1
+
+PasswordAuthentication       no
+PermitEmptyPasswords         no
+KbdInteractiveAuthentication no
+
+UsePAM yes
+
+X11Forwarding mo
+PrintMotd     no
+
+AcceptEnv LANG LC_*
+
+Subsystem	sftp	/usr/lib/openssh/sftp-server
